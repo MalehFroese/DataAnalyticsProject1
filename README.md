@@ -1,4 +1,4 @@
-# SQL Data Analytics Project
+#SQL Data Analytics Project
 
 This project was for a game company, the goal of my team (Maria-Elena Froese and Kelly Spencer) was to investigate player retention. Our metric was whether a player played a match 30 days after joining the game. We had four tables: to record players, to record matches, to record purchases, to record an inventory of game items to sell. Our first question was how to link players to matches, then our second question was how to identify whether players played after 30 days of joining the game.
 
