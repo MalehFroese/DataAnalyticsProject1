@@ -1,4 +1,4 @@
-#SQL Data Analytics Project
+# SQL Data Analytics Project
 
 This project was for a game company, the goal of my team (Maria-Elena Froese and Kelly Spencer) was to investigate player retention. Our metric was whether a player played a match 30 days after joining the game. We had four tables: to record players, to record matches, to record purchases, to record an inventory of game items to sell. Our first question was how to link players to matches, then our second question was how to identify whether players played after 30 days of joining the game.
 
@@ -11,3 +11,5 @@ We also tried a few other queries very similar to the one one described above wi
 The main challenge we face was that neither my colleague or I were game players and it was a new domain we were not familiar with. We discussed our assumptions and by talking about our questions and concerns and going back to the schemas, the table data, and posing a few exploratory queries we were able to dissipate most of our questions. The few remaining questions were clarified with the client (Wes Chorney).
 
 Our second challenge was that the data had very little variance and exploring the fractional retention from a number of metrics (day joined, age, location, and O.S.) yield to results that gave us little room to make recommendations to improve retention. Our very last attempt was to compare fractional retention to wining percentage and at this time our results were of high value. We aggregated the data into 10 buckets from players that won 0-10% of their games to players that won 90-100% of their games so that we could easily visualize the results and split each of those buckets into players who were retained and not retained after 30 days as depicted in chart 2.
+
+![Fractional retention visualization](WiningvsRetention.png)

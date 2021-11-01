@@ -1,3 +1,4 @@
+```sql
 --Query 1, GOAL: to compute the fractional retention by day joined to the game
 WITH
   player_lastGame AS (
@@ -29,13 +30,13 @@ WITH
   FROM
     player_lastGame)
 SELECT -- Compute fractional retention by day joined
-  joined AS day_joined, 
-  count(player_id) AS playersJoined, 
-  SUM(retention) AS playersRetained, 
+  joined AS day_joined,
+  count(player_id) AS playersJoined,
+  SUM(retention) AS playersRetained,
   (SUM(retention) / count(player_id)) AS fractionalRetention
 FROM retention_table
 GROUP BY day_joined
-ORDER BY day_joined ASC 
+ORDER BY day_joined ASC
 
 --QUERY 2, GOAL: to compute fractional retention by age
 WITH
@@ -70,14 +71,14 @@ WITH
     AS retention
   FROM
     player_lastGame)
-SELECT 
+SELECT
   age AS players_age,
-  count(player_id) AS playersJoined, 
-  SUM(retention) AS playersRetained, 
+  count(player_id) AS playersJoined,
+  SUM(retention) AS playersRetained,
   (SUM(retention) / count(player_id)) AS fractionalRetention
 FROM retention_table
 GROUP BY players_age
-ORDER BY players_age ASC 
+ORDER BY players_age ASC
 
 --QUERY 3, GOAL: To compute retention by location
 WITH
@@ -112,10 +113,10 @@ WITH
     AS retention
   FROM
     player_lastGame)
-SELECT 
+SELECT
   location AS players_location,
-  count(player_id) AS playersJoined, 
-  SUM(retention) AS playersRetained, 
+  count(player_id) AS playersJoined,
+  SUM(retention) AS playersRetained,
   (SUM(retention) / count(player_id)) AS fractionalRetention
 FROM retention_table
 GROUP BY players_location
@@ -175,4 +176,4 @@ GROUP BY
   win_pct_range
 ORDER BY
   win_pct_range ASC
-
+```
